@@ -26,6 +26,11 @@ dependencies {
 	implementation 'org.jetbrains:annotations:23.0.0'
 
 	implementation "io.springfox:springfox-boot-starter:3.0.0"
+
+	// No plugin found for prefix 'spring-boot' in the current project 에러 해결
+	//implementation 'org.springframework.boot:spring-boot-starter-parent:2.3.0.RELEASE'
+
+
 	// Spring Boot Starter
 	testImplementation ('org.springframework.boot:spring-boot-starter-test')
 
