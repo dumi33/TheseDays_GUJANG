@@ -5,9 +5,6 @@ import com.example.TD_People.config.BaseException;
 import com.example.TD_People.config.BaseResponse;
 import com.example.TD_People.place.model.GetPlaceListRes;
 import com.example.TD_People.place.model.GetPlaceRes;
-import com.example.TD_People.posting.PostingProvider;
-import com.example.TD_People.posting.PostingService;
-import com.example.TD_People.posting.model.GetPostingRes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
