@@ -4,9 +4,6 @@ package com.example.TD_People.place;
 import com.example.TD_People.config.BaseException;
 import com.example.TD_People.place.model.GetPlaceListRes;
 import com.example.TD_People.place.model.GetPlaceRes;
-import com.example.TD_People.reservation.ReservationDao;
-import com.example.TD_People.reservation.model.GetReservationListRes;
-import com.example.TD_People.reservation.model.GetReservationRes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

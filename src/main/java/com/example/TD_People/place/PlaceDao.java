@@ -3,7 +3,6 @@ package com.example.TD_People.place;
 
 import com.example.TD_People.place.model.GetPlaceListRes;
 import com.example.TD_People.place.model.GetPlaceRes;
-import com.example.TD_People.posting.model.GetPostingRes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
