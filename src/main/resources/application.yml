@@ -3,12 +3,18 @@ server:
 
 spring:
   application:
-    name: Dpath
+    name: TD_People
+#
+#  datasource:
+#    url: jdbc:mysql://springstudy.cgllngfx5zdm.ap-northeast-2.rds.amazonaws.com:3306/Dpath
+#    username:  admin
+#    password:  dla23689!!
+#    driver-class-name: com.mysql.cj.jdbc.Driver # mysql
 
   datasource:
-    url: jdbc:mysql://springstudy.cgllngfx5zdm.ap-northeast-2.rds.amazonaws.com:3306/Dpath
-    username:  admin
-    password:  dla23689!!
+    url: jdbc:mysql://yt4307.iptime.org:3306/TD_People?serverTimezone=Asia/Seoul
+    username: icefe
+    password: icefe0706
     driver-class-name: com.mysql.cj.jdbc.Driver # mysql
 
   sql:
