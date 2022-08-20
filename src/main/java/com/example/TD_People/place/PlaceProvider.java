@@ -39,4 +39,20 @@ public class PlaceProvider {
             throw new BaseException(DATABASE_ERROR);
         }
     }
+
+    /**
+     *   IDX별 장소 조회
+     * */
+    //
+    public GetPlaceRes getPlaceByIdx(int placeIdx) throws BaseException {
+        try {
+            GetPlaceRes getPlaceRes = placeDao.getPlaceByIdx(placeIdx);
+            return getPlaceRes;
+        } catch (Exception exception) {
+            // 에러가 발생하였다면 : 5006 : DataBase Error입니다.
+            throw new BaseException(DATABASE_ERROR);
+        }
+    }
+
+
 }

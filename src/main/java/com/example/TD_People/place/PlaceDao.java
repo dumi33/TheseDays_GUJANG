@@ -32,4 +32,14 @@ public class PlaceDao {
         );
     }
 
+    public GetPlaceRes getPlaceByIdx(int placeIdx) {
+
+        String getPlaceQuery = "select placeIdx,placeName,content from Place where placeIdx = ?";
+        return this.jdbcTemplate.queryForObject(getPlaceQuery,
+                (rs, rowNum) -> new GetPlaceRes(
+                        rs.getInt("placeIdx"),
+                        rs.getString("placeName"),
+                        rs.getString("content")),placeIdx);
+    }
+
 }

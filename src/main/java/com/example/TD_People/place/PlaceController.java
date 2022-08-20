@@ -9,10 +9,7 @@ import com.example.TD_People.posting.PostingProvider;
 import com.example.TD_People.posting.PostingService;
 import com.example.TD_People.posting.model.GetPostingRes;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -45,5 +42,22 @@ public class PlaceController {
             return new BaseResponse<>((exception.getStatus()));
         }
     }
+
+    /**
+     * 장소 목록 개별 조회 API
+     * [GET] /places/{placeIdx}
+     */
+    @ResponseBody
+    @GetMapping("/{placeIdx}")
+    public BaseResponse<GetPlaceRes> getPlaceByIdx(@PathVariable int placeIdx) {
+        try {
+            //조회 성공 시 : List<GetBlocklistRes> 형태로 결과(차단목록) 반환
+            GetPlaceRes getPlaceRes = placeProvider.getPlaceByIdx(placeIdx); //조회(read) -> Provider
+            return new BaseResponse<>(getPlaceRes);
+        } catch (BaseException exception) {
+            return new BaseResponse<>((exception.getStatus()));
+        }
+    }
+
 
 }
