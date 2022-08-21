@@ -11,5 +11,12 @@ import lombok.Setter;
 public class GetPlaceRes {
     private int placeIdx;
     private String placeName;
-    private String content;
+    private String type;
+    private String region;
+    private String position;
+    private int price ;
+    private String tennisType;
+    private String time;
+    private int rate;
+    private String etc;
 }

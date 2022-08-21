@@ -21,24 +21,38 @@ public class PlaceDao {
 
     public List<GetPlaceRes> getPlaceList() {
 
-        String getPlaceQuery = "select placeIdx,placeName,content from Place";
+        String getPlaceQuery = "select placeIdx,placeName,type,region,position,price,tennisType,time,rate,etc from Place";
         return this.jdbcTemplate.query(getPlaceQuery,
                 (rs, rowNum) -> new GetPlaceRes(
                         rs.getInt("placeIdx"),
                         rs.getString("placeName"),
-                        rs.getString("content"))
+                        rs.getString("type"),
+                        rs.getString("region"),
+                        rs.getString("position"),
+                        rs.getInt("price"),
+                        rs.getString("tennisType"),
+                        rs.getString("time"),
+                        rs.getInt("rate"),
+                        rs.getString("etc"))
 
         );
     }
 
     public GetPlaceRes getPlaceByIdx(int placeIdx) {
 
-        String getPlaceQuery = "select placeIdx,placeName,content from Place where placeIdx = ?";
+        String getPlaceQuery = "select placeIdx,placeName,type,region,position,price,tennisType,time,rate,etc from Place where placeIdx = ?";
         return this.jdbcTemplate.queryForObject(getPlaceQuery,
                 (rs, rowNum) -> new GetPlaceRes(
                         rs.getInt("placeIdx"),
                         rs.getString("placeName"),
-                        rs.getString("content")),placeIdx);
+                        rs.getString("type"),
+                        rs.getString("region"),
+                        rs.getString("position"),
+                        rs.getInt("price"),
+                        rs.getString("tennisType"),
+                        rs.getString("time"),
+                        rs.getInt("rate"),
+                        rs.getString("etc")),placeIdx);
     }
 
 }
